@@ -106,7 +106,7 @@ namespace MPT_Results
                     MessageBox.Show("Output folder already contains a results file");
                     return;
                 }
-                using (StreamWriter sw = File.CreateText(textBox2.Text + "\Output.txt"))
+                using (StreamWriter sw = File.CreateText(textBox2.Text + "\\Output.txt"))
                 {
                     if (passedTest.Count() != 0)
                     {
@@ -144,6 +144,11 @@ namespace MPT_Results
             catch(Exception EX)
             {
                 MessageBox.Show(EX.ToString());
+            }
+
+            if (checkBox1.Checked == true)
+            {
+                File.OpenText(textBox2.Text + "\\Output.txt")
             }
         }
     }
