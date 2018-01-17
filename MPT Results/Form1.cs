@@ -148,7 +148,7 @@ namespace MPT_Results
 
             if (checkBox1.Checked == true)
             {
-                File.OpenText(textBox2.Text + "\\Output.txt")
+                File.OpenText(textBox2.Text + "\\Output.txt");
             }
         }
     }
